@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left"></div>
+
+        <nav>
+            <div class="logo"><h1>BURIA</h1></div>
+
+            <ul>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+            <div class="right">
+                <p>Sign In</p>
+                <p>En</p>
+            </div>
+        </nav>
+
+
+        <div class="mid">
+            <div class="first">
+                <p><span>BUSINESS</span></p>
+                <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <p class="pipi  ">Feel Stuck with your business? Join our program, improve your product and pitch investors effectively.</p>
+            </div>
+            <div class="sec">
+                <img src="https://images.pexels.com/photos/12135522/pexels-photo-12135522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <p><span>AMBITIONS</span></p>
+                <button>Get started</button>
+            </div>
+            <div class="th">
+                <p><span>TURNED</span></p>
+                <img src="https://images.pexels.com/photos/9303640/pexels-photo-9303640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <p><span>REAL</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timeline=gsap.timeline();
+
+        timeline.from("nav",{
+            opacity:0,
+            delay:.5,
+            duration:1,
+            ease:Power2.easeInOut,
+        })
+        timeline.from(".first",{
+            y:-500,
+            opacity:0,
+            duration:.7,
+            ease:Expo.easeInOut,
+            stagger:{
+                amount:0.5,
+            }
+        }) 
+       
+ timeline.from(".sec",{
+            x:-500,
+            opacity:0,
+            duration:.7,
+            ease:Expo.easeInOut,
+            stagger:{
+                amount:0.5,
+            }
+        }) 
+        timeline.from(".th",{
+            y:500,
+            opacity:0,
+            duration:.7,
+            ease:Expo.easeInOut,
+            stagger:{
+                amount:.5,
+            }
+        })
+        timeline.fromTo("img",{
+            width:"0%",
+            opacity:0,
+            duration:1.5,
+            ease:Expo.easeInOut
+        },
+        {
+            width:"250px",
+            opacity:1,
+            ease:Expo.easeInOut
+            
+        })
+
+    </script>
+
+    
+</body>
+</html>
