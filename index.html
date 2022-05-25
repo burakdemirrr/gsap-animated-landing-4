@@ -11,6 +11,7 @@
 <body>
     <div class="wrapper">
         <div class="left"></div>
+        <div class="right"></div>
 
         <nav>
             <div class="logo"><h1>BURIA</h1></div>
@@ -50,10 +51,20 @@
 
     <script>
         let timeline=gsap.timeline();
+        timeline.to(".left",{
+            delay:.6,
+            height:"0%",
+            ease:Power2.easeInOut
+        })
+        timeline.to(".right",{
+            delay:.6,
+            width:"0%",
+            ease:Power2.easeInOut
+        })
 
         timeline.from("nav",{
             opacity:0,
-            delay:.5,
+            delay:.2,
             duration:1,
             ease:Power2.easeInOut,
         })

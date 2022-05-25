@@ -86,4 +86,19 @@ button:hover{
     width:350px;
     font-weight: 600;
 }
-
+.left{
+    position:absolute;
+    height: 100%;
+    bottom:0;
+    width:100%;
+    z-index:3;
+    background-color: black;
+}
+.right{
+    position:absolute;
+    height: 100%;
+    left:0;
+    width:100%;
+    z-index:2;
+    background-color: rgb(229, 229, 229);
+}
