@@ -36,14 +36,14 @@ nav ul li a{
     margin-left:50px;
     width:70px;
 }
-.right{
+.flexend{
     font-weight: 600;
     display: flex;
 }
-.right p{
+.flexend p{
     padding:23px;
 }
-.right p:nth-child(2){
+.flexend p:nth-child(2){
     border-left:2px solid black;
 }
 img{
@@ -81,7 +81,7 @@ button:hover{
     cursor: pointer;
 }
 
-.first .pipi {
+.first .desc {
     line-height: 30px;
     width:350px;
     font-weight: 600;
